@@ -29,7 +29,7 @@ Before this playbook can be executed on a project, you must ensure that the foll
 ```
 
 ## Resources
-These playbook creates the following resources
+This playbook creates the following resources
 ```
 - 1 Bigtable Instance
 - 2 Bigtable Tables
