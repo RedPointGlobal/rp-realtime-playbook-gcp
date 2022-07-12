@@ -14,10 +14,10 @@ resource "google_service_account" "bigtable" {
 // BIGTABLE IAM
 resource "google_bigtable_table_iam_member" "bigtable_editor" {
   for_each = var.bigtable_tables
-  table       = each.value.name
-  instance    = var.bigtable_table_instance_name
-  role        = "roles/bigtable.user"
-  member      = "serviceAccount:redpoint-realtime-dev@devops-188816.iam.gserviceaccount.com"
+  table    = each.value.name
+  instance = var.bigtable_table_instance_name
+  role     = "roles/bigtable.user"
+  member   = "serviceAccount:redpoint-realtime-dev@devops-188816.iam.gserviceaccount.com"
 }
 
 // BIGQUERY IAM
@@ -26,4 +26,12 @@ resource "google_bigquery_dataset_iam_member" "editor" {
   dataset_id = each.value.dataset_id
   role       = "roles/bigquery.dataEditor"
   member     = "serviceAccount:redpoint-realtime-dev@devops-188816.iam.gserviceaccount.com"
+}
+
+// STORAGE
+resource "google_storage_bucket_iam_member" "storage" {
+  for_each = var.storage_buckets
+  bucket = each.value.name
+  role = "roles/storage.objectAdmin"
+  member = "serviceAccount:redpoint-realtime-dev@devops-188816.iam.gserviceaccount.com"
 }

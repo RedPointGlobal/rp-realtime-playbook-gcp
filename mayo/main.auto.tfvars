@@ -1,14 +1,17 @@
+/////////// TERRAFORM PROVISIONER
 gcp_credentials = "devops-188816-b939c40c301b.json"
 gcp_project     = "devops-188816"
 gcp_region      = "us-east1"
 gcp_zone        = "us-east1-b"
 
+/////////// LABELS
 core_labels = {
   "application" = "redpoint-realtime-plus-agent"
   "env"         = "production"
   "vendor"      = "redpoint"
 }
 
+/////////// BIG TABLE
 bigtable_table_instance_name = "redpoint-realtime-dev"
 
 bigtable_instances = {
@@ -42,6 +45,7 @@ bigtable_tables = {
   }
 }
 
+/////////// BIGQUERY
 bigquery_datasets = {
 
   "ops_db" = {
@@ -64,5 +68,17 @@ bigquery_datasets = {
     project                         = "devops-188816"
     dataset_id                      = "CDPPiiVAULT"
     delete_contents_on_destroy      = true
+  }
+}
+
+/////////// STORAGE
+storage_buckets = {
+
+  "dev" = {
+    location = "US"
+    name = "redpoint-realtime-dev"
+    project = "devops-188816"
+    storage_class = "MULTI_REGIONAL"
+    versioning_enabled = true
   }
 }

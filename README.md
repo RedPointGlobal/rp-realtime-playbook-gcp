@@ -34,7 +34,9 @@ This playbook creates the following resources in the permitted GCP project
 - 1 Bigtable Instance
 - 2 Bigtable Tables
 - 2 BigQuery Datasets
+- 1 Cloud Storage Bucket
 - 1 Service Account to be used by Realtime Agent
 - 1 Bigtable Table IAM permission assignment
 - 1 BigQuery Dataset IAM permission assignment
+- 1 Cloud Storage Bucket IAM permission assignment
 ```
