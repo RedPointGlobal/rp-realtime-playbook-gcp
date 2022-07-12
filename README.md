@@ -29,7 +29,7 @@ Before this playbook can be executed on a project, you must ensure that the foll
 ```
 
 ## Resources
-This playbook creates the following resources
+This playbook creates the following resources in the supplied GCP project
 ```
 - 1 Bigtable Instance
 - 2 Bigtable Tables
