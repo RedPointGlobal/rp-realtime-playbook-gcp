@@ -21,11 +21,11 @@ Before this playbook can be executed on a project, you must ensure that the foll
 - The Service Account you execute the scripts with has the right permissions.
 - The following Google APIs are active on the project.
 ```
-      - bigquery.googleapis.com
-      - bigtableadmin.googleapis.com
-      - bigtabletableadmin.googleapis.com
-      - iam.googleapis.com
-      - bigtable.googleapis.com
+- bigquery.googleapis.com
+- bigtableadmin.googleapis.com
+- bigtabletableadmin.googleapis.com
+- iam.googleapis.com
+- bigtable.googleapis.com
 ```
 
 ## Resources
