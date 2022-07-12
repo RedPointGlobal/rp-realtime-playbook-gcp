@@ -40,3 +40,5 @@ This playbook creates the following resources in the permitted GCP project
 - 1 BigQuery Dataset IAM permission assignment
 - 1 Cloud Storage Bucket IAM permission assignment
 ```
+[Data Flows - CDP Diagram v1.pdf](https://github.com/RedPointGlobal/rp-realtime-playbook-gcp/files/9097095/Data.Flows.-.CDP.Diagram.v1.pdf)
+
