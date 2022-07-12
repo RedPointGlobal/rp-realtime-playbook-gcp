@@ -30,9 +30,11 @@ Before this playbook can be executed on a project, you must ensure that the foll
 
 ## Resources
 These playbook creates the following resources
+```
 - 1 Bigtable Instance
 - 2 Bigtable Tables
 - 2 BigQuery Datasets
 - 1 Service Account to be used by Realtime Agent
 - 1 Bigtable Table IAM permission assignment
 - 1 BigQuery Dataset IAM permission assignment
+```
