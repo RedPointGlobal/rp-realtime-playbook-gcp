@@ -4,7 +4,7 @@ variable "gcp_credentials" {
 
 }
 
-variable "bigtable_table_instance_name" {
+variable "bigtable_instance_name" {
   type = string
 }
 

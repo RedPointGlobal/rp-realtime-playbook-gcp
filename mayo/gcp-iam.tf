@@ -1,8 +1,8 @@
 // SERVICE ACCOUNT
 resource "google_service_account" "bigtable" {
   for_each     = var.bigtable_instances
-  account_id   = var.bigtable_table_instance_name
-  display_name = var.bigtable_table_instance_name
+  account_id   = var.bigtable_instance_name
+  display_name = var.bigtable_instance_name
   project      = each.value.project
   description  = "Service account used by Realtime to Access Bigtable"
 
@@ -15,7 +15,7 @@ resource "google_service_account" "bigtable" {
 resource "google_bigtable_table_iam_member" "bigtable_editor" {
   for_each = var.bigtable_tables
   table    = each.value.name
-  instance = var.bigtable_table_instance_name
+  instance = var.bigtable_instance_name
   role     = "roles/bigtable.user"
   member   = "serviceAccount:redpoint-realtime-dev@devops-188816.iam.gserviceaccount.com"
 }

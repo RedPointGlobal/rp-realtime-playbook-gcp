@@ -1,11 +1,11 @@
 resource "google_bigtable_instance" "redpoint_rtd" {
   for_each     = var.bigtable_instances
-  name         = var.bigtable_table_instance_name
-  display_name = var.bigtable_table_instance_name
+  name         = var.bigtable_instance_name
+  display_name = var.bigtable_instance_name
   project      = var.gcp_project
 
   cluster {
-    cluster_id   = var.bigtable_table_instance_name
+    cluster_id   = var.bigtable_instance_name
     zone         = each.value.zone
     storage_type = each.value.storage_type
 
@@ -31,7 +31,7 @@ resource "google_bigtable_table" "redpoint_rtd" {
   column_family {
     family = each.value.column_family
   }
-  instance_name = "projects/${var.gcp_project}/instances/${var.bigtable_table_instance_name}"
+  instance_name = "projects/${var.gcp_project}/instances/${var.bigtable_instance_name}"
   split_keys    = each.value.split_keys
 
   lifecycle {

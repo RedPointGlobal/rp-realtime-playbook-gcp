@@ -12,7 +12,7 @@ core_labels = {
 }
 
 /////////// BIG TABLE
-bigtable_table_instance_name = "redpoint-realtime-dev"
+bigtable_instance_name = "redpoint-realtime-dev"
 
 bigtable_instances = {
 
