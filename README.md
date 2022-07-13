@@ -42,3 +42,11 @@ This playbook creates the following resources in the permitted GCP project
 ```
 [Data Flows - CDP Diagram v1.pdf](https://github.com/RedPointGlobal/rp-realtime-playbook-gcp/files/9097095/Data.Flows.-.CDP.Diagram.v1.pdf)
 
+## Permissions in Bigtable
+Bigtable provides a relatively simple set of IAM permissions when compared to other products in the Google Cloud catalog. In addition to the three primitive IAM roles, Bigtable supports four product-specific roles:
+```
+roles/bigtable.admin: Full administrative access to all Bigtable operations
+roles/bigtable.user: Read-write access to all Bigtable data, without the ability to create new clusters or tables, or scale existing clusters
+roles/bigtable.reader: Read-only access to data in Bigtable tables
+roles/bigtable.viewer: View-only access to cluster configuration without data access
+```
