@@ -1,4 +1,5 @@
 ![RG](https://user-images.githubusercontent.com/42842390/158004336-60f07c05-7e5d-420e-87a6-22c5ac206fb6.jpg)
+[Data Flows - CDP Diagram v1.pdf](https://github.com/RedPointGlobal/rp-realtime-playbook-gcp/files/9097095/Data.Flows.-.CDP.Diagram.v1.pdf)
 ## Redpoint Realtime Decisions (RTD) - MAYO Infrastructure Playbook (GCP)
 Redpoint Realtime (RTD) helps businesses unlock contextually relevant experiences that meet customer expectations, at each step of the journey - with real-time engagement, decisions and interactions.
 
@@ -27,7 +28,6 @@ Before this playbook can be executed on a project, you must ensure that the foll
 - iam.googleapis.com
 - bigtable.googleapis.com
 ```
-
 ## Resources
 This playbook creates the following resources in the permitted GCP project
 ```
@@ -40,8 +40,6 @@ This playbook creates the following resources in the permitted GCP project
 - 1 BigQuery Dataset IAM permission assignment
 - 1 Cloud Storage Bucket IAM permission assignment
 ```
-[Data Flows - CDP Diagram v1.pdf](https://github.com/RedPointGlobal/rp-realtime-playbook-gcp/files/9097095/Data.Flows.-.CDP.Diagram.v1.pdf)
-
 ## Permissions in Bigtable
 Bigtable provides a relatively simple set of IAM permissions when compared to other products in the Google Cloud catalog. In addition to the three primitive IAM roles, Bigtable supports four product-specific roles:
 ```
