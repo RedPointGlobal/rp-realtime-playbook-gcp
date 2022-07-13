@@ -14,8 +14,6 @@ This High Traffic blueprint should support:
  - Assuming NoSQL Realtime Aux DB document of < 2KB
  - Assuming Request of Multiple decisions only makes 1 CAL db request
  
- - [Data Flows - CDP Diagram v1.pdf](https://github.com/RedPointGlobal/rp-realtime-playbook-gcp/files/9097095/Data.Flows.-.CDP.Diagram.v1.pdf)
-
 ## Requirements
 Before this playbook can be executed on a project, you must ensure that the following pre-requisites are fulfilled:
 
