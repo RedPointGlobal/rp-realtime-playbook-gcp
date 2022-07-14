@@ -13,6 +13,18 @@ variable "gcp_project" {
   description = "ID of GCP Project in which terraform will deploy resources"
 }
 
+variable "storage_buckets" {
+  type = map(object({
+    name               = string
+    location           = string
+    project            = string
+    storage_class      = string
+    versioning_enabled = bool
+    iam_role           = string
+    iam_member         = string
+  }))
+}
+
 variable "gcp_region" {
   type        = string
   description = "GCP region in which tterraform will deploy resources"
@@ -46,6 +58,10 @@ variable "bigtable_tables" {
     column_family = string
     project       = string
     split_keys    = list(string)
+    iam_role      = string
+    iam_member    = string
+    iam_role      = string
+    iam_member    = string
   }))
 
 }
@@ -60,5 +76,7 @@ variable "bigquery_datasets" {
     default_table_expiration_ms     = number
     default_partition_expiration_ms = number
     delete_contents_on_destroy      = bool
+    iam_role                        = string
+    iam_member                      = string
   }))
 }

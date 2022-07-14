@@ -11,13 +11,3 @@ resource "google_storage_bucket" "redpoint_rtd" {
   }
 }
 
-variable "storage_buckets" {
-  type = map(object({
-    name = string 
-    location = string
-    project = string
-    storage_class = string
-    versioning_enabled = bool
-    
-  }))
-}

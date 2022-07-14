@@ -6,7 +6,7 @@ gcp_zone        = "us-east1-b"
 
 /////////// LABELS
 core_labels = {
-  "application" = "redpoint-realtime-plus-agent"
+  "application" = "redpoint-realtime-decisions"
   "env"         = "production"
   "vendor"      = "redpoint"
 }
@@ -35,6 +35,8 @@ bigtable_tables = {
     name          = "rpiData"
     project       = "devops-188816"
     split_keys    = ["a", "b", "c"]
+    iam_role      = "roles/bigtable.user"
+    iam_member    = "serviceAccount:redpoint-realtime-dev@devops-188816.iam.gserviceaccount.com"
   }
 
   "cache" = {
@@ -42,6 +44,8 @@ bigtable_tables = {
     name          = "rpiCache"
     project       = "devops-188816"
     split_keys    = ["a", "b", "c"]
+    iam_role      = "roles/bigtable.user"
+    iam_member    = "serviceAccount:redpoint-realtime-dev@devops-188816.iam.gserviceaccount.com"
   }
 }
 
@@ -57,6 +61,9 @@ bigquery_datasets = {
     project                         = "devops-188816"
     dataset_id                      = "CDPMarketingOPS"
     delete_contents_on_destroy      = true
+    iam_role                        = "roles/bigquery.dataEditor"
+    iam_member                      = "serviceAccount:redpoint-realtime-dev@devops-188816.iam.gserviceaccount.com"
+
   }
 
   "pii_vault" = {
@@ -68,6 +75,8 @@ bigquery_datasets = {
     project                         = "devops-188816"
     dataset_id                      = "CDPPiiVAULT"
     delete_contents_on_destroy      = true
+    iam_role                        = "roles/bigquery.dataEditor"
+    iam_member                      = "serviceAccount:redpoint-realtime-dev@devops-188816.iam.gserviceaccount.com"
   }
 }
 
@@ -75,10 +84,12 @@ bigquery_datasets = {
 storage_buckets = {
 
   "dev" = {
-    location = "US"
-    name = "redpoint-realtime-dev"
-    project = "devops-188816"
-    storage_class = "MULTI_REGIONAL"
+    location           = "US"
+    name               = "redpoint-realtime-dev"
+    project            = "devops-188816"
+    storage_class      = "MULTI_REGIONAL"
     versioning_enabled = true
+    iam_role           = "roles/storage.objectAdmin"
+    iam_member         = "serviceAccount:redpoint-realtime-dev@devops-188816.iam.gserviceaccount.com"
   }
 }
