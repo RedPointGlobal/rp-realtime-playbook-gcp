@@ -52,3 +52,8 @@ BigQuery too provides a relatively simple set of IAM permissions when compared t
 ```
 roles/bigquery.dataEditor: Read and update data and metadata for the table or view.
 ```
+## Permissions in Cloud Storage
+The Redpoint Application will need the following capabilities
+```
+roles/storage.objectAdmin: Grants full control over objects, including listing, creating, viewing, and deleting objects.
+```
