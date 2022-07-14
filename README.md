@@ -48,7 +48,7 @@ Bigtable provides a relatively simple set of IAM permissions when compared to ot
 roles/bigtable.user: Read-write access to all Bigtable data, without the ability to create new clusters or tables, or scale existing clusters
 ```
 ## Permissions in BigQuery
-Bigtable provides a relatively simple set of IAM permissions when compared to other products in the Google Cloud catalog. The Redpoint Application will need the following capabilities
+BigQuery too provides a relatively simple set of IAM permissions when compared to other products in the Google Cloud catalog. The Redpoint Application will need the following capabilities
 ```
 roles/bigquery.dataEditor: Read and update data and metadata for the table or view.
 ```
