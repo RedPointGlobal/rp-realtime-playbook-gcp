@@ -10,9 +10,9 @@ resource "google_bigtable_instance" "redpoint_rtd" {
     storage_type = each.value.storage_type
 
     autoscaling_config {
-      min_nodes  = 3
-      max_nodes  = 6
-      cpu_target = 60
+      min_nodes  = each.value.autoscaling_config.min_nodes
+      max_nodes  = each.value.autoscaling_config.max_nodes
+      cpu_target = each.value.autoscaling_config.cpu_target
     }
   }
 
