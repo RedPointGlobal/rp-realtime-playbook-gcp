@@ -41,19 +41,18 @@ This playbook creates the following resources in the permitted GCP project
 ```
 ## Access Permissions
 Google Cloud IAM supports policies for clients that are not project members. A service account in the Redpoint project that needs access to BigQuery and Bigtable data in the Mayo project, can be assigned an IAM policy granting the service account the appropriate role
-
 ## Permissions in Bigtable
-Bigtable provides a relatively simple set of IAM permissions when compared to other products in the Google Cloud catalog. The Redpoint Application will need the following capabilities
+The Redpoint Application will need the capability to Read-write access to all Bigtable data, without the ability to create new clusters or tables, or scale existing clusters
 ```
-roles/bigtable.user: Read-write access to all Bigtable data, without the ability to create new clusters or tables, or scale existing clusters
+roles/bigtable.user
 ```
 ## Permissions in BigQuery
-BigQuery too provides a relatively simple set of IAM permissions when compared to other products in the Google Cloud catalog. The Redpoint Application will need the following capabilities
+The Redpoint Application will need the capability to Read and update data and metadata for the table or view.
 ```
-roles/bigquery.dataEditor: Read and update data and metadata for the table or view.
+roles/bigquery.dataEditor
 ```
 ## Permissions in Cloud Storage
-The Redpoint Application will need the following capabilities
+The Redpoint Application will need full control over objects, including listing, creating, viewing, and deleting objects.
 ```
-roles/storage.objectAdmin: Grants full control over objects, including listing, creating, viewing, and deleting objects.
+roles/storage.objectAdmin
 ```
