@@ -13,8 +13,17 @@ core_labels = {
 
 // IAM ROLES
 rp_interaction_iam_roles = [
-  "roles/bigquery.dataEditor", "roles/bigquery.jobUser", "roles/bigquery.dataViewer",
-"roles/bigquery.user", "roles/storage.objectAdmin"]
+  "roles/bigquery.dataEditor",
+  "roles/bigquery.jobUser",
+  "roles/bigquery.dataViewer",
+  "roles/bigquery.user",
+"roles/storage.objectAdmin"]
+
+// SERVICE ACCOUNTS
+service_accounts = [
+  "serviceAccount:redpoint-prod-rpi@paas-prod.iam.gserviceaccount.com",
+  "serviceAccount:redpoint-prod-rtd@paas-prod.iam.gserviceaccount.com",
+"serviceAccount:redpoint-prod-rpdm@paas-prod.iam.gserviceaccount.com"]
 
 /////////// BIG TABLE
 bigtable_instance_name = "rpprod-bigtable-instance"
@@ -54,8 +63,6 @@ bigtable_tables = {
 bigquery_datasets = {
 
   "ops_db" = {
-    default_partition_expiration_ms = 3600000
-    default_table_expiration_ms     = 3600000
     description                     = "Redpoint Realtime Marketing Ops DB"
     friendly_name                   = "RPPRODCDPMarketingOPS"
     location                        = "us-central1"
@@ -66,8 +73,6 @@ bigquery_datasets = {
   }
 
   "pii_vault" = {
-    default_partition_expiration_ms = 3600000
-    default_table_expiration_ms     = 3600000
     description                     = "Redpoint Realtime PII Vault"
     friendly_name                   = "RPPRODCDPPiiVAULT"
     location                        = "us-central1"
@@ -77,8 +82,6 @@ bigquery_datasets = {
   }
 
   "offer_history" = {
-    default_partition_expiration_ms = 3600000
-    default_table_expiration_ms     = 3600000
     description                     = "Redpoint Offer History"
     friendly_name                   = "RPPRODCDPOfferHistory"
     location                        = "us-central1"
@@ -88,8 +91,6 @@ bigquery_datasets = {
   }
 
   "large_data_sets" = {
-    default_partition_expiration_ms = 3600000
-    default_table_expiration_ms     = 3600000
     description                     = "Redpoint Large Datasets"
     friendly_name                   = "rpprod_cdp_lr_prod"
     location                        = "us-central1"

@@ -72,8 +72,10 @@ variable "bigquery_datasets" {
     dataset_id                      = string
     description                     = string
     location                        = string
-    default_table_expiration_ms     = number
-    default_partition_expiration_ms = number
     delete_contents_on_destroy      = bool
   }))
+}
+
+variable "service_accounts" {
+  type = list(string)
 }
