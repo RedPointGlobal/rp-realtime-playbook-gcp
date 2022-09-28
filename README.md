@@ -1,8 +1,8 @@
 ![RG](https://user-images.githubusercontent.com/42842390/158004336-60f07c05-7e5d-420e-87a6-22c5ac206fb6.jpg)
-## Redpoint Interaction - MAYO Infrastructure Playbook (GCP)
-Redpoint Interaction helps businesses unlock contextually relevant experiences that meet customer expectations, at each step of the journey - with real-time engagement, decisions and interactions.
+## Redpoint Realtime Decisions (RTD) - MAYO Infrastructure Playbook (GCP)
+Redpoint Realtime (RTD) helps businesses unlock contextually relevant experiences that meet customer expectations, at each step of the journey - with real-time engagement, decisions and interactions.
 
-This repo contains Terraform scripts playbook to deploy and configure a High Traffic - Low Latency insfrastructure blueprint to support Redpoint Interaction for MAYO
+This repo contains Terraform scripts playbook to deploy and configure a High Traffic - Low Latency insfrastructure blueprint to support Redpoint Realtime Decisions (RTD) for MAYO
 
 ## Assumptions
 This High Traffic blueprint should support:
