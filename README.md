@@ -30,17 +30,17 @@ Before this playbook can be executed on a project, you must ensure that the foll
 ## Resources
 This playbook creates the following resources in the permitted GCP project
 ```
-- 1 Bigtable Instance
-- 2 Bigtable Tables
-- 2 BigQuery Datasets
-- 1 Cloud Storage Bucket
-- 1 Service Account to be used by Realtime Agent
-- 1 Bigtable Table IAM permission assignment
-- 1 BigQuery Dataset IAM permission assignment
-- 1 Cloud Storage Bucket IAM permission assignment
+- Bigtable Instance
+- Bigtable Tables
+- BigQuery Datasets
+- Cloud Storage Bucket
+- Bigtable Table IAM permission assignment
+- BigQuery Dataset IAM permission assignment
+- Cloud Storage Bucket IAM permission assignment
 ```
 ## Access Permissions
 Google Cloud IAM supports policies for clients that are not project members. A service account in the Redpoint project that needs access to BigQuery and Bigtable data in the Mayo project, can be assigned an IAM policy granting the service account the appropriate role
+
 ## Permissions in Bigtable
 The Redpoint Application will need the capability to Read-write access to all Bigtable data, without the ability to create new clusters or tables, or scale existing clusters
 ```
@@ -50,6 +50,9 @@ roles/bigtable.user
 The Redpoint Application will need the capability to Read and update data and metadata for the table or view.
 ```
 roles/bigquery.dataEditor
+roles/bigquery.jobUser
+roles/bigquery.dataViewer
+roles/bigquery.user
 ```
 ## Permissions in Cloud Storage
 The Redpoint Application will need full control over objects, including listing, creating, viewing, and deleting objects.
