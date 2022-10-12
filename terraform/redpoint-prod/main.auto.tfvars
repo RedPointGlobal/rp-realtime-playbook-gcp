@@ -17,7 +17,8 @@ rp_interaction_iam_roles = [
   "roles/bigquery.jobUser",
   "roles/bigquery.dataViewer",
   "roles/bigquery.user",
-"roles/storage.objectAdmin"]
+"roles/storage.objectAdmin",
+"roles/bigtable.admin"]
 
 // SERVICE ACCOUNTS
 service_accounts = [
