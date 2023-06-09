@@ -17,14 +17,14 @@ rp_interaction_iam_roles = [
   "roles/bigquery.jobUser",
   "roles/bigquery.dataViewer",
   "roles/bigquery.user",
-"roles/storage.objectAdmin",
+  "roles/storage.objectAdmin",
 "roles/bigtable.admin"]
 
 // SERVICE ACCOUNTS
 service_accounts = [
-  "serviceAccount:redpoint-prod-rpi@paas-prod.iam.gserviceaccount.com",
-  "serviceAccount:redpoint-prod-rtd@paas-prod.iam.gserviceaccount.com",
-"serviceAccount:redpoint-prod-rpdm@paas-prod.iam.gserviceaccount.com"]
+  "serviceAccount:redpoint-prod-rpi@${var.gcp_project}.iam.gserviceaccount.com",
+  "serviceAccount:redpoint-prod-rtd@${var.gcp_project}.gserviceaccount.com",
+"serviceAccount:redpoint-prod-rpdm@${var.gcp_project}.gserviceaccount.com"]
 
 /////////// BIG TABLE
 bigtable_instance_name = "rpprod-bigtable-instance"
@@ -64,40 +64,40 @@ bigtable_tables = {
 bigquery_datasets = {
 
   "ops_db" = {
-    description                     = "Redpoint Realtime Marketing Ops DB"
-    friendly_name                   = "RPPRODCDPMarketingOPS"
-    location                        = "us-central1"
-    project                         = "your_project_id"
-    dataset_id                      = "RPprodCDPMarketingOPS"
-    delete_contents_on_destroy      = true
+    description                = "Redpoint Realtime Marketing Ops DB"
+    friendly_name              = "RPPRODCDPMarketingOPS"
+    location                   = "us-central1"
+    project                    = "your_project_id"
+    dataset_id                 = "RPprodCDPMarketingOPS"
+    delete_contents_on_destroy = true
 
   }
 
   "pii_vault" = {
-    description                     = "Redpoint Realtime PII Vault"
-    friendly_name                   = "RPPRODCDPPiiVAULT"
-    location                        = "us-central1"
-    project                         = "your_project_id"
-    dataset_id                      = "RPprodCDPPiiVAULT"
-    delete_contents_on_destroy      = true
+    description                = "Redpoint Realtime PII Vault"
+    friendly_name              = "RPPRODCDPPiiVAULT"
+    location                   = "us-central1"
+    project                    = "your_project_id"
+    dataset_id                 = "RPprodCDPPiiVAULT"
+    delete_contents_on_destroy = true
   }
 
   "offer_history" = {
-    description                     = "Redpoint Offer History"
-    friendly_name                   = "RPPRODCDPOfferHistory"
-    location                        = "us-central1"
-    project                         = "your_project_id"
-    dataset_id                      = "RPprodCDPOfferHistory"
-    delete_contents_on_destroy      = true
+    description                = "Redpoint Offer History"
+    friendly_name              = "RPPRODCDPOfferHistory"
+    location                   = "us-central1"
+    project                    = "your_project_id"
+    dataset_id                 = "RPprodCDPOfferHistory"
+    delete_contents_on_destroy = true
   }
 
   "large_data_sets" = {
-    description                     = "Redpoint Large Datasets"
-    friendly_name                   = "rpprod_cdp_lr_prod"
-    location                        = "us-central1"
-    project                         = "your_project_id"
-    dataset_id                      = "rpprod_cdp_lr_prod"
-    delete_contents_on_destroy      = true
+    description                = "Redpoint Large Datasets"
+    friendly_name              = "rpprod_cdp_lr_prod"
+    location                   = "us-central1"
+    project                    = "your_project_id"
+    dataset_id                 = "rpprod_cdp_lr_prod"
+    delete_contents_on_destroy = true
   }
 }
 

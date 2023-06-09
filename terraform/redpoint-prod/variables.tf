@@ -67,12 +67,12 @@ variable "bigtable_tables" {
 
 variable "bigquery_datasets" {
   type = map(object({
-    friendly_name                   = string
-    project                         = string
-    dataset_id                      = string
-    description                     = string
-    location                        = string
-    delete_contents_on_destroy      = bool
+    friendly_name              = string
+    project                    = string
+    dataset_id                 = string
+    description                = string
+    location                   = string
+    delete_contents_on_destroy = bool
   }))
 }
 
