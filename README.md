@@ -2,7 +2,7 @@
 ## Redpoint Realtime Decisions (RTD) - Infrastructure Playbook (GCP)
 Redpoint Realtime (RTD) helps businesses unlock contextually relevant experiences that meet customer expectations, at each step of the journey - with real-time engagement, decisions and interactions.
 
-This repo contains Terraform scripts for deploying and onfiguring the supporting insfrastructure in the Google Cloud Platform (GCP)
+This repo contains Terraform scripts for deploying the supporting insfrastructure in the Google Cloud Platform (GCP)
 
 ## Assumptions
 This High Traffic blueprint should support:
