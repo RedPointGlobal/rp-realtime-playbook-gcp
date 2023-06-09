@@ -17,8 +17,8 @@ This High Traffic blueprint should support:
 ## Requirements
 Before this playbook can be executed on a project, you must ensure that the following pre-requisites are fulfilled:
 
-- Terraform is installed on the machine where Terraform is executed.
-- The Service Account you execute the scripts with has the right permissions.
+- Terraform is installed on the machine executing the scripts.
+- The Service Account you execut the scripts with has the right permissions.
 - The following Google APIs are active on the project.
 ```
 - bigquery.googleapis.com
